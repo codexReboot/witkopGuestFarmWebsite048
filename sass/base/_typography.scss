@@ -1,3 +1,6 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
 // font-family: "Inika", serif; weight: 400 & 700; -----> Heading, h1
 // font-family: "Protest Riot", sans-serif; weight: 400; -----> Heading, h2
 // font-family: "Lato", sans-serif; weight: 400 & 700 -----> Headings & Body Text, h3, h4, h5 & p
@@ -7,7 +10,7 @@ body {
 	font-size: clamp(1.4rem, 4.5vw, 1.6rem);
 	font-weight: 400;
 	line-height: 1.4;
-	text-align: justify;	
+	text-align: justify;
 }
 .logo {
 	color: $cf-citron;
@@ -30,7 +33,7 @@ body {
 	line-height: 1.2;
 	text-align: center;
 	text-decoration: underline;
-	text-underline-offset: 3px;	
+	text-underline-offset: 3px;
 }
 .headingH2 {
 	color: $cf-smoky-black;
@@ -129,13 +132,18 @@ body {
 }
 .footer {
 	color: $cf-bone;
-	&__footerNavlink, &__footerDeveloperLink, &__websiteUsageLink {
+	&__footerNavlink,
+	&__footerDeveloperLink,
+	&__websiteUsageLink {
 		color: $cf-citron;
 		font-weight: 700;
 		text-decoration: underline;
 		text-underline-offset: 3px;
 	}
-	&__footerNavitem, &__footerTermsAndConditions, &__footerPrivacyPolicy, &__footerDeveloper {
+	&__footerNavitem,
+	&__footerTermsAndConditions,
+	&__footerPrivacyPolicy,
+	&__footerDeveloper {
 		text-align: center;
 	}
 	&__footerCopyright {
@@ -143,13 +151,16 @@ body {
 		font-weight: 700;
 	}
 	@include respond(tab-land) {
-		&__footerNavitem, &__footerTermsAndConditions, &__footerPrivacyPolicy, &__footerDeveloper {
+		&__footerNavitem,
+		&__footerTermsAndConditions,
+		&__footerPrivacyPolicy,
+		&__footerDeveloper {
 			text-align: left;
 		}
-		&__footerTermsAndConditions, &__footerPrivacyPolicy, &__footerDeveloper {
+		&__footerTermsAndConditions,
+		&__footerPrivacyPolicy,
+		&__footerDeveloper {
 			text-align: right;
-		}	
+		}
 	}
 }
-
-

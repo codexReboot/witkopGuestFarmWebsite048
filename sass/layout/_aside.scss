@@ -1,118 +1,124 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
 .sidebar {
-      @include displayFlexColumn;
-      justify-content: flex-start;
-      align-items: center;
-      width: 100%;
-      gap: 1rem;
-      padding: 0 1rem;
-      @include respond(tab-port) {
-            gap: 1rem; 
-            padding: 2rem;
-      }
-      @include respond(tab-land) {
-            flex: 1 0 25%;
-            gap: 3rem; 
-            padding: 2rem 2rem 2rem 0rem; 
-      }
-      @include respond(desk) {
-            // gap: 1rem; 
-      }
-      @include respond(desk) {
-            // gap: 1rem; 
-      }
-      &__testimonials {
-            @include displayFlexColumn;
-            justify-content: flex-start;
-            gap: 3rem;
-            width: min(100%, 45rem);
-            padding: 3rem 1rem;
-            position: relative;
-      }
-      &__testimonialsWidgetContainer {
-            
-      }
-      &____testimonialsContainer {
-            width: 100%;
-      }
-      &__socialMedia {
-            @include displayFlexColumn;
-            justify-content: flex-start;
-            gap: 3rem;
-            width: min(100%, 45rem);
-            padding: 3rem 1rem;
-            position: relative;
-      }
-      &__imgCompAndTxtContainer {
-            @include displayFlexColumn;
-            gap: 3rem;
-      }
-      &__socialMediaNavigation {
-            @include displayFlexColumn;
-            gap: 2rem;
-      }
-      &__socialMediaNavigationList {
-            @include displayFlexRow;
-            gap: 3rem;
-      }
-      &__socialMediaNavigationIcon {
-            width: 4rem;
-            height: 5rem;
-      }
-      &__contact {
-            @include displayFlexColumn;
-            justify-content: flex-start;
-            gap: 3rem;
-            width: min(100%, 45rem);
-            padding: 3rem 1rem;
-            position: relative;
-      }
-      &__contactAddressContainer {
-            @include displayFlexColumn;
-            gap: 4rem;
-      }
-      &__contactAddressItem {
-            @include displayFlexColumn;
-            gap: .25rem;
-      }
-      &__contactGoogleMapsContainer {
-            @include displayFlexColumn;
-            gap: 2rem;
-            width: 100%;
-            padding: 1rem;
-            position: relative;
-      }
-      &__contactGoogleMapsMap {
-            display: block;
-            width: 100%;
-            height: 60vw;
-      }
-      @include respond(tab-land) {
-            &__testimonials, &__socialMedia, &__contact {
-                  width: min(100%, 75rem);
-                  padding: 3rem 5rem;
-            }
-            &__imgCompAndTxtContainer {
-                  @include displayFlexRow;
-                  gap: 5rem;
-            }
-            &__contactAddressContainer {
-                  @include displayFlexRow;
-                  gap: 8rem;
-            }
-            &__contactAddressItem {
-                  align-items: flex-start;
-            }
-            &__contactGoogleMapsMap {
-                  height: 30vw;
-            }
-      }
-      @include respond(desk) {
-            &__testimonials, &__socialMedia, &__contact {
-                  width: min(100%, 90rem);
-                  padding: 3rem 5rem;
-            }
-            &__imgCompAndTxtContainer {
-                  gap: 8rem;
-            }
-      }
+	@include displayFlexColumn;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	gap: 1rem;
+	padding: 0 1rem;
+	@include respond(tab-port) {
+		gap: 1rem;
+		padding: 2rem;
+	}
+	@include respond(tab-land) {
+		flex: 1 0 25%;
+		gap: 3rem;
+		padding: 2rem 2rem 2rem 0rem;
+	}
+	@include respond(desk) {
+		// gap: 1rem;
+	}
+	@include respond(desk) {
+		// gap: 1rem;
+	}
+	&__testimonials {
+		@include displayFlexColumn;
+		justify-content: flex-start;
+		gap: 3rem;
+		width: min(100%, 45rem);
+		padding: 3rem 1rem;
+		position: relative;
+	}
+	&__testimonialsWidgetContainer {
+	}
+	&____testimonialsContainer {
+		width: 100%;
+	}
+	&__socialMedia {
+		@include displayFlexColumn;
+		justify-content: flex-start;
+		gap: 3rem;
+		width: min(100%, 45rem);
+		padding: 3rem 1rem;
+		position: relative;
+	}
+	&__imgCompAndTxtContainer {
+		@include displayFlexColumn;
+		gap: 3rem;
+	}
+	&__socialMediaNavigation {
+		@include displayFlexColumn;
+		gap: 2rem;
+	}
+	&__socialMediaNavigationList {
+		@include displayFlexRow;
+		gap: 3rem;
+	}
+	&__socialMediaNavigationIcon {
+		width: 4rem;
+		height: 5rem;
+	}
+	&__contact {
+		@include displayFlexColumn;
+		justify-content: flex-start;
+		gap: 3rem;
+		width: min(100%, 45rem);
+		padding: 3rem 1rem;
+		position: relative;
+	}
+	&__contactAddressContainer {
+		@include displayFlexColumn;
+		gap: 4rem;
+	}
+	&__contactAddressItem {
+		@include displayFlexColumn;
+		gap: 0.25rem;
+	}
+	&__contactGoogleMapsContainer {
+		@include displayFlexColumn;
+		gap: 2rem;
+		width: 100%;
+		padding: 1rem;
+		position: relative;
+	}
+	&__contactGoogleMapsMap {
+		display: block;
+		width: 100%;
+		height: 60vw;
+	}
+	@include respond(tab-land) {
+		&__testimonials,
+		&__socialMedia,
+		&__contact {
+			width: min(100%, 75rem);
+			padding: 3rem 5rem;
+		}
+		&__imgCompAndTxtContainer {
+			@include displayFlexRow;
+			gap: 5rem;
+		}
+		&__contactAddressContainer {
+			@include displayFlexRow;
+			gap: 8rem;
+		}
+		&__contactAddressItem {
+			align-items: flex-start;
+		}
+		&__contactGoogleMapsMap {
+			height: 30vw;
+		}
+	}
+	@include respond(desk) {
+		&__testimonials,
+		&__socialMedia,
+		&__contact {
+			width: min(100%, 90rem);
+			padding: 3rem 5rem;
+		}
+		&__imgCompAndTxtContainer {
+			gap: 8rem;
+		}
+	}
 }

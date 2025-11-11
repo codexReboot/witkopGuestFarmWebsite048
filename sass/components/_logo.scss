@@ -1,14 +1,32 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
 .logo {
-      @include displayFlexRow;
-      gap: .5rem;
-      &__img {
-            width: 5rem;
-            height: 5rem;
-      }
-      &__lineBreak {
-            display: block;
-            @media (min-width: 350px) {
-                  display: none;
-            }
-      }
+	@include displayFlexRow;
+	gap: 0.5rem;
+	&__img {
+		width: 5rem;
+		height: 5rem;
+	}
+	&__lineBreak {
+		display: block;
+		@media (min-width: 350px) {
+			display: none;
+		}
+	}
+}
+
+.footer__logo {
+	@include respond(tab-land) {
+		flex: 0 0 40rem;
+	}
+}
+
+.footer__codexRebootLogo {
+	display: block;
+	width: 10rem;
+	height: auto;
+	@include respond(tab-land) {
+		margin-bottom: 0.5rem;
+	}
 }

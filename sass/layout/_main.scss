@@ -1,110 +1,119 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
 .main {
-      @include displayFlexColumn;
-      justify-content: flex-start;
-      align-items: center;
-      width: 100%;
-      gap: 1rem;
-      // padding: 0 1rem;
-      @include respond(tab-port) {
-            gap: 1rem; 
-            // padding: 2rem;
-      }
-      @include respond(tab-land) {
-            flex: 1 0 70%;
-            gap: 3rem;
-            // padding: 2rem 0 2rem 2rem; 
-      }
-      @include respond(desk) {
-            // gap: 1rem; 
-      }
-      @include respond(desk) {
-            // gap: 1rem; 
-      }
-      &__about {
-            @include displayFlexColumn;
-            justify-content: flex-start;
-            gap: 3rem;
-            // width: min(100%, 45rem);
-            padding: 112vw 1rem 3rem;
-            margin-top: 0;
-            position: relative;
-      }
-      &__imgContainer--aboutTop {
-            filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -100;
-      }
-      &__textContainerAbout {
-            @include displayFlexColumn;
-            gap: 3rem;
-            width: min(100%, 45rem);
-      }
-      &__aboutLinkParagraphContainer {
-            position: relative;
-      }
-      &__accommodation {
-            @include displayFlexColumn;
-            justify-content: flex-start;
-            gap: 3rem;
-            width: min(100%, 45rem);
-            padding: 3rem 1rem;
-            position: relative;
-      }
-      &__activities {
-            @include displayFlexColumn;
-            justify-content: flex-start;
-            gap: 3rem;
-            width: min(100%, 45rem);
-            padding: 3rem 1rem;
-            position: relative;
-      }
-      &__activitiesItemContainer {
-            @include displayFlexColumn;
-            gap: 8rem;
-      }
-      &__activitiesItem {
-            @include displayFlexColumn;
-            gap: 3rem;
-      }
-      &__gallery {
-            @include displayFlexColumn;
-            justify-content: flex-start;
-            gap: 3rem;
-            width: min(100%, 45rem);
-            padding: 3rem 1rem;
-            position: relative;
-      }
-      &__imgCompAndTxtContainer {
-            @include displayFlexColumn;
-            gap: 2rem;
-      }
-      @include respond(tab-land) {
-            &__textContainerAbout, &__accommodation, &__activities, &__gallery {
-                  width: min(100%, 75rem);
-                  padding: 3rem 5rem;
-            }
-            &__textContainerAbout {
-                  padding: 0rem 5rem;
-            }
-            &__imgCompAndTxtContainer {
-                  @include displayFlexRow;
-                  align-items: center;
-                  gap: 5rem;
-            }
-      }
-      @include respond(desk) {
-            &__textContainerAbout, &__accommodation, &__activities, &__gallery {
-                  width: min(100%, 90rem);
-                  padding: 3rem 5rem;
-            }
-            &__textContainerAbout {
-                  padding: 0rem 5rem;
-            }
-            &__imgCompAndTxtContainer {
-                  gap: 8rem;
-            }
-      }
+	@include displayFlexColumn;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	gap: 1rem;
+	// padding: 0 1rem;
+	@include respond(tab-port) {
+		gap: 1rem;
+		// padding: 2rem;
+	}
+	@include respond(tab-land) {
+		flex: 1 0 70%;
+		gap: 3rem;
+		// padding: 2rem 0 2rem 2rem;
+	}
+	@include respond(desk) {
+		// gap: 1rem;
+	}
+	@include respond(desk) {
+		// gap: 1rem;
+	}
+	&__about {
+		@include displayFlexColumn;
+		justify-content: flex-start;
+		gap: 3rem;
+		// width: min(100%, 45rem);
+		padding: 112vw 1rem 3rem;
+		margin-top: 0;
+		position: relative;
+	}
+	&__imgContainer--aboutTop {
+		filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -100;
+	}
+	&__textContainerAbout {
+		@include displayFlexColumn;
+		gap: 3rem;
+		width: min(100%, 45rem);
+	}
+	&__aboutLinkParagraphContainer {
+		position: relative;
+	}
+	&__accommodation {
+		@include displayFlexColumn;
+		justify-content: flex-start;
+		gap: 3rem;
+		width: min(100%, 45rem);
+		padding: 3rem 1rem;
+		position: relative;
+	}
+	&__activities {
+		@include displayFlexColumn;
+		justify-content: flex-start;
+		gap: 3rem;
+		width: min(100%, 45rem);
+		padding: 3rem 1rem;
+		position: relative;
+	}
+	&__activitiesItemContainer {
+		@include displayFlexColumn;
+		gap: 8rem;
+	}
+	&__activitiesItem {
+		@include displayFlexColumn;
+		gap: 3rem;
+	}
+	&__gallery {
+		@include displayFlexColumn;
+		justify-content: flex-start;
+		gap: 3rem;
+		width: min(100%, 45rem);
+		padding: 3rem 1rem;
+		position: relative;
+	}
+	&__imgCompAndTxtContainer {
+		@include displayFlexColumn;
+		gap: 2rem;
+	}
+	@include respond(tab-land) {
+		&__textContainerAbout,
+		&__accommodation,
+		&__activities,
+		&__gallery {
+			width: min(100%, 75rem);
+			padding: 3rem 5rem;
+		}
+		&__textContainerAbout {
+			padding: 0rem 5rem;
+		}
+		&__imgCompAndTxtContainer {
+			@include displayFlexRow;
+			align-items: center;
+			gap: 5rem;
+		}
+	}
+	@include respond(desk) {
+		&__textContainerAbout,
+		&__accommodation,
+		&__activities,
+		&__gallery {
+			width: min(100%, 90rem);
+			padding: 3rem 5rem;
+		}
+		&__textContainerAbout {
+			padding: 0rem 5rem;
+		}
+		&__imgCompAndTxtContainer {
+			gap: 8rem;
+		}
+	}
 }

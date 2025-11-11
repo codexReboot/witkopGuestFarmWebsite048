@@ -1,53 +1,55 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
 .carouselAccomm {
-      @include displayFlexColumn;
-      gap: .75rem;
-      width: min(95%, 35rem);
-      margin: 0 auto;
-      @include respond(tab-land) {
-            width: 35%;
-      }
-      &__carouselImageContainer {
-            @include displayFlexColumn;
-      }
-      &__carouselFigure {
-            position: relative;
-            transition: opacity 1.2s;
-      }
-      &__carouselFigcaption {
-            position: absolute;
-            bottom: 2rem;
-            left: 2rem;
-      }
-      &__carouselImage {
-            border: 2px solid $cp-coyote;
-            box-shadow: 0 0 18px 1px rgba($cp-smoky-black, 0.45);
-            height: min(60vw, 20rem);
-            padding:.5rem;
-      }
-      &__displayNone {
-            display: none;
-      }
+	@include displayFlexColumn;
+	gap: 0.75rem;
+	width: min(95%, 35rem);
+	margin: 0 auto;
+	@include respond(tab-land) {
+		width: 35%;
+	}
+	&__carouselImageContainer {
+		@include displayFlexColumn;
+	}
+	&__carouselFigure {
+		position: relative;
+		transition: opacity 1.2s;
+	}
+	&__carouselFigcaption {
+		position: absolute;
+		bottom: 2rem;
+		left: 2rem;
+	}
+	&__carouselImage {
+		border: 2px solid $cp-coyote;
+		box-shadow: 0 0 18px 1px rgba($cp-smoky-black, 0.45);
+		height: min(60vw, 20rem);
+		padding: 0.5rem;
+	}
+	&__displayNone {
+		display: none;
+	}
 	&__carouselNavContainer {
-            @include displayFlexRow;
-            width: 95%;
-      }
-      &__carouselArrow {
-            @include displayFlexColumn;
-            width:3.5rem;
-            height: 3.5rem;
-      }
-      &__carouselIndexContainer {
-            @include displayFlexRow;
-            gap: .75rem;
-      }
-      &__carouselIndex {
-            border: 1px solid $cp-coyote;
-            border-radius: 100px;
-            width:.75rem;
-            height: .75rem;
-      }
-      &__carouselIndex:first-child {
-            background-color: $cp-coyote;
-      }
-      
+		@include displayFlexRow;
+		width: 95%;
+	}
+	&__carouselArrow {
+		@include displayFlexColumn;
+		width: 3.5rem;
+		height: 3.5rem;
+	}
+	&__carouselIndexContainer {
+		@include displayFlexRow;
+		gap: 0.75rem;
+	}
+	&__carouselIndex {
+		border: 1px solid $cp-coyote;
+		border-radius: 100px;
+		width: 0.75rem;
+		height: 0.75rem;
+	}
+	&__carouselIndex:first-child {
+		background-color: $cp-coyote;
+	}
 }

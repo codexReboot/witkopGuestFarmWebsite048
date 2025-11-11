@@ -1,88 +1,120 @@
-.footer {
-      @include displayFlexColumn;
-      gap: 2rem;
-      background-color: $cp-smoky-black;
-      width: 100%;
-      padding: 3rem 1rem;
-      &__logoAndSocialContainer {
-            @include displayFlexColumn;
-            gap: 2rem;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 
-            a {
-                  @include displayFlexColumn;
-            }
-      }
-      &__figure {
-            width: 85%;
-      }
-      &__figureLogoImg {
-            display: block;
-            width: clamp(20rem, 50vw, 30rem);
-            height: auto;
-      }
-      &__footerHr {
-            border: 0;
-            height: 1px;
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));        
-            width: 100%;
-      }
-      &__figure, &__footerSocialMediaNavigation, &__footerSiteNavigation, &__footerCopyrightAndDeveloperContainer, &__websiteUsageNavigation {
-            @include displayFlexColumn;
-            gap:1rem;
-      }
-      &__footerSocialMediaNavigationList {
-            @include displayFlexRow;
-            gap: 2rem;
-      }
-      &__linksAndLegalContainer {
-            @include displayFlexColumn;
-            gap: 2rem;
-      }
-      &__footerBrDeveloper {
-            display: block;
-      }
-      @include respond(tab-land) {
-            padding: 3rem 5rem;
-            &__figure {
-                  @include displayFlexRow;
-                  justify-content: flex-start;
-                  flex: 0 0 50%;
-            }
-            &__figureFigcaption {
-                  max-width: 20rem;
-            }
-            &__figureLogoImg {
-                  width: clamp(8rem, 20vw, 12rem);
-            }
-            &__footerSocialMediaNavigation {
-                  align-items: flex-end;
-            }
-            &__logoAndSocialContainer {
-                  @include displayFlexRow;
-                  justify-content: space-between;
-                  align-items: flex-start;
-                  gap: 7rem;
-                  width: min(100%, 75rem);
-            }
-            &__footerSiteNavigation {
-                  align-items: flex-start;
-            }
-            &__websiteUsageNavigation {
-                  align-items: flex-end;
-            }
-            &__linksAndLegalContainer {
-                  @include displayFlexRow;
-                  justify-content: space-between;
-                  align-items: flex-start;
-                  gap: 7rem;
-                  width: min(100%, 75rem);
-            }  
-            &__footerCopyrightAndDeveloperContainer {
-                  @include displayFlexRow;
-                  justify-content: space-between;
-                  align-items: flex-start;
-                  gap: 7rem;
-                  width: min(100%, 75rem);
-            }
-      }
+.footer {
+	@include displayFlexColumn;
+	gap: 2rem;
+	background-color: $cp-smoky-black;
+	width: 100%;
+	padding: 3rem 1rem;
+	&__logoAndSocialContainer {
+		@include displayFlexColumn;
+		gap: 2rem;
+
+		a {
+			@include displayFlexColumn;
+		}
+	}
+	&__figure {
+		width: 85%;
+	}
+	&__figureLogoImg {
+		display: block;
+		width: clamp(20rem, 50vw, 30rem);
+		height: auto;
+	}
+	&__footerHr {
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+		width: 100%;
+	}
+	&__figure,
+	&__footerSocialMediaNavigation,
+	&__footerSiteNavigation,
+	&__footerCopyrightAndDeveloperContainer,
+	&__websiteUsageNavigation {
+		@include displayFlexColumn;
+		gap: 1rem;
+	}
+	&__footerSocialMediaNavigationList {
+		@include displayFlexRow;
+		gap: 2rem;
+	}
+	&__linksAndLegalContainer {
+		@include displayFlexColumn;
+		gap: 2rem;
+	}
+	&__footerBrDeveloper {
+		display: block;
+	}
+	@include respond(tab-land) {
+		padding: 3rem 5rem;
+		&__figure {
+			@include displayFlexRow;
+			justify-content: flex-start;
+			width: 100%;
+		}
+		&__figureFigcaption {
+			max-width: 20rem;
+		}
+		&__figureLogoImg {
+			width: clamp(8rem, 20vw, 12rem);
+		}
+		&__footerSocialMediaNavigation {
+			align-items: flex-end;
+		}
+		&__logoAndSocialContainer {
+			@include displayFlexRow;
+			justify-content: space-between;
+			align-items: center;
+			gap: 7rem;
+			width: min(100%, 75rem);
+		}
+		&__footerSiteNavigation {
+			width: 55%;
+			align-items: flex-start;
+		}
+		&__footerSiteNavigationList {
+			@include displayFlexRow;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			row-gap: 1rem;
+			column-gap: 5rem;
+			border-right: 1px solid rgba($cp-citron, 0.15);
+		}
+		&__footerNavitem {
+			width: 15rem;
+		}
+		&__footerTermsAndConditionsAndPrivacyPolicy {
+			@include displayFlexColumn;
+			align-items: flex-end;
+			gap: 1rem;
+		}
+		&__websiteUsageNavigation {
+			align-items: flex-end;
+		}
+		&__linksAndLegalContainer {
+			@include displayFlexRow;
+			justify-content: space-between;
+			align-items: flex-start;
+			gap: 7rem;
+			width: min(100%, 75rem);
+		}
+		&__footerCopyrightAndDeveloperContainer {
+			@include displayFlexRow;
+			justify-content: space-between;
+			align-items: center;
+			gap: 0rem;
+			width: min(100%, 75rem);
+		}
+		&__footerDeveloper {
+			@include displayFlexRow;
+			gap: 1rem;
+			text-align: left;
+		}
+		&__footerBrDeveloper {
+			display: none;
+		}
+	}
 }

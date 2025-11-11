@@ -1,12 +1,15 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
 .mainAndSidebarSection {
-      @include displayFlexColumn;
-      justify-content: flex-start;
-      width: 100%;
-      // gap: 5rem;
-      // @include respond(tab-land) {
-      //       @include displayFlexRow;
-      //       justify-content: space-between;
-      //       align-items: flex-start;
-      //       gap: 2rem;
-      // }
+	@include displayFlexColumn;
+	justify-content: flex-start;
+	width: 100%;
+	// gap: 5rem;
+	// @include respond(tab-land) {
+	//       @include displayFlexRow;
+	//       justify-content: space-between;
+	//       align-items: flex-start;
+	//       gap: 2rem;
+	// }
 }

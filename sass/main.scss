@@ -1,25 +1,16 @@
-@import "abstracts/variables";
-@import "abstracts/mixins";
+// main.scss
 
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
+// Abstracts (variables, mixins)
+@use "./abstracts/index.scss" as *;
 
-@import "components/button";
-@import "components/carouselAccom";
-@import "components/divLink";
-@import "components/grid-container";
-@import "components/imgComp";
-@import "components/logo";
-@import "components/navigation";
-@import "components/socialmedia";
+// Base styles
+@use "./base/index.scss" as *;
 
-@import "layout/aside";
-@import "layout/footer";
-@import "layout/header";
-@import "layout/main";
-@import "layout/mainAndSidebar";
-@import "layout/navbar";
+// Layout
+@use "./layout/index.scss" as *;
 
-@import "pages/home";
+// Components
+@use "./components/index.scss" as *;
+
+// Pages
+@use "./abstracts/index.scss" as *;
