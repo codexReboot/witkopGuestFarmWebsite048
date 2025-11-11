@@ -1,0 +1,103 @@
+@use "../abstracts/mixins" as *;
+// Simple, contract-style SCSS for Terms & Conditions
+// Compile this to /css/terms.css
+
+$background-color: #f9f4ec; // soft beige
+$text-color: #000;
+$font-family: "Times New Roman", Times, serif;
+
+body {
+	background-color: $background-color;
+	color: $text-color;
+	font-family: $font-family;
+	font-size: 1.1rem;
+	line-height: 1.7;
+	margin: 0;
+	padding: 0;
+}
+
+.terms {
+	position: relative;
+
+	&__homepageLink {
+		background-color: rgba($text-color, 0.65);
+		border: 2px solid rgba($text-color, 0.85);
+		border-radius: 0.5rem;
+		padding: 0.5rem 2.5rem;
+		width: fit-content;
+		@include displayFlexRow;
+		gap: 0.5rem;
+		position: sticky;
+		top: 2rem;
+		left: 82%;
+		z-index: 100;
+		transition: all 0.3s;
+
+		span {
+			color: #dfdfdf;
+			font-weight: 700;
+		}
+
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+	&__isantiLogo {
+		display: block;
+		width: 2.8rem;
+		height: auto;
+	}
+	&__container {
+		max-width: 900px;
+		margin: 4rem auto;
+		padding: 3rem 2rem;
+		background-color: rgba(255, 255, 255, 0.7);
+		border: 1px solid #ccc;
+		border-radius: 8px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+	}
+
+	&__updated {
+		text-align: center;
+		font-style: italic;
+		color: #444;
+		margin-bottom: 2rem;
+	}
+
+	h2 {
+		font-size: 1.3rem;
+		margin-top: 2rem;
+		text-decoration: underline;
+	}
+
+	p,
+	ul {
+		margin-bottom: 1rem;
+	}
+
+	ul {
+		padding-left: 1.5rem;
+		li {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	a {
+		color: #000;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	address {
+		margin-top: 1rem;
+		font-style: normal;
+	}
+}
