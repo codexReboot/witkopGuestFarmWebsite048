@@ -4,26 +4,21 @@
 	"description": "one page website with dynamic content to market Witkop Guest Farm",
 	"main": "app.js",
 	"scripts": {
-  "watch:main:sass": "sass sass/main.scss css/styles.css -w",
-  "watch:terms:sass": "sass sass/terms.scss css/terms.css -w",
-  "watch:paia:sass": "sass sass/paia.scss css/paia.css -w",
-
-  "watch:all:sass": "npm-run-all --parallel watch:main:sass watch:terms:sass watch:paia:sass",
-
-  "build:main:sass": "sass sass/main.scss css/styles.comp.css",
-  "build:terms:sass": "sass sass/terms.scss css/terms.comp.css",
-  "build:paia:sass": "sass sass/paia.scss css/paia.comp.css",
-
-  "prefix:main:css": "postcss --use autoprefixer -b 'last 10 versions' css/styles.comp.css -o css/styles.prefix.css",
-  "prefix:terms:css": "postcss --use autoprefixer -b 'last 10 versions' css/terms.comp.css -o css/terms.prefix.css",
-  "prefix:paia:css": "postcss --use autoprefixer -b 'last 10 versions' css/paia.comp.css -o css/paia.prefix.css",
-
-  "compress:main:css": "sass css/styles.prefix.css css/styles.css --style=compressed",
-  "compress:terms:css": "sass css/terms.prefix.css css/terms.css --style=compressed",
-  "compress:paia:css": "sass css/paia.prefix.css css/paia.css --style=compressed",
-
-  "build:css": "npm-run-all build:main:sass build:terms:sass build:paia:sass prefix:main:css prefix:terms:css prefix:paia:css compress:main:css compress:terms:css compress:paia:css"
-},
+		"watch:main:sass": "sass sass/main.scss css/styles.css -w",
+		"watch:terms:sass": "sass sass/terms.scss css/terms.css -w",
+		"watch:paia:sass": "sass sass/paia.scss css/paia.css -w",
+		"watch:all:sass": "npm-run-all --parallel watch:main:sass watch:terms:sass watch:paia:sass",
+		"build:main:sass": "sass sass/main.scss css/styles.comp.css",
+		"build:terms:sass": "sass sass/terms.scss css/terms.comp.css",
+		"build:paia:sass": "sass sass/paia.scss css/paia.comp.css",
+		"prefix:main:css": "postcss --use autoprefixer -b 'last 10 versions' css/styles.comp.css -o css/styles.prefix.css",
+		"prefix:terms:css": "postcss --use autoprefixer -b 'last 10 versions' css/terms.comp.css -o css/terms.prefix.css",
+		"prefix:paia:css": "postcss --use autoprefixer -b 'last 10 versions' css/paia.comp.css -o css/paia.prefix.css",
+		"compress:main:css": "sass css/styles.prefix.css css/styles.css --style=compressed",
+		"compress:terms:css": "sass css/terms.prefix.css css/terms.css --style=compressed",
+		"compress:paia:css": "sass css/paia.prefix.css css/paia.css --style=compressed",
+		"build:css": "npm-run-all build:main:sass build:terms:sass build:paia:sass prefix:main:css prefix:terms:css prefix:paia:css compress:main:css compress:terms:css compress:paia:css"
+	},
 	"author": "Schalk van Dyk",
 	"license": "ISC",
 	"devDependencies": {

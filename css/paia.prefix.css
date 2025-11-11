@@ -1,0 +1,107 @@
+/*
+0px		- 		600px:			mobile 	--> Mobile First Approach (normal styles apply)
+600px		- 		900px: 			tab-port 	--> Tablet Portrait 
+900px		-		1200px:			tab-land	--> Tablet Landscape
+1200px	-		1800px:			desk		--> Desktop 
+1800px +							big-desk	--> Big Desktop
+
+REMEMBER: 1em = 16px;
+$breakpoint argument choices
+	- tab-port and >	600 --> 900 	: min-width: 37.5em (600/16)
+	- tab-land and >	900 --> 1200	: min-width: 56.25em (900/16)
+	- desk and     >	1200 --> 1800	: min-width: 75em (1200/16)
+	- big-desk and >  1800 +		: min-width: 112.5em (1800/16)
+
+ORDER: base + typography > general layout + grid > page layout > components
+*/
+body {
+  background-color: #eee8df;
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+.paia {
+  position: relative;
+}
+.paia__homepageLink {
+  background-color: rgba(0, 0, 0, 0.65);
+  border: 2px solid rgba(0, 0, 0, 0.85);
+  border-radius: 0.5rem;
+  padding: 0.5rem 2.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  position: sticky;
+  top: 2rem;
+  left: 82%;
+  z-index: 100;
+  transition: all 0.3s;
+}
+.paia__homepageLink span {
+  color: #dfdfdf;
+  font-weight: 700;
+}
+.paia__homepageLink:hover {
+  transform: scale(1.05);
+}
+.paia__isantiLogo {
+  display: block;
+  width: 2.8rem;
+  height: auto;
+}
+.paia__container {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.paia__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.paia__updated {
+  text-align: center;
+  font-style: italic;
+  color: #444;
+  margin-bottom: 2rem;
+}
+.paia h2 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  text-decoration: underline;
+}
+.paia p,
+.paia ul {
+  margin-bottom: 1rem;
+}
+.paia ul {
+  padding-left: 1.5rem;
+}
+.paia ul li {
+  margin-bottom: 0.5rem;
+}
+.paia a {
+  color: #000;
+  text-decoration: underline;
+}
+.paia a:hover {
+  text-decoration: none;
+}
+.paia address {
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvYWJzdHJhY3RzL19taXhpbnMuc2NzcyIsIi4uL3Nhc3MvcGFnZXMvX3BhaWEuc2NzcyIsInBhaWEuY29tcC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7Ozs7Ozs7Ozs7Ozs7OztDQUFBO0FDSUE7RUFDQyx5QkFMa0I7RUFNbEIsV0FMWTtFQU1aLDRDQUxhO0VBTWIsaUJBQUE7RUFDQSxnQkFBQTtFQUNBLFNBQUE7RUFDQSxVQUFBO0FDV0Q7O0FEUkE7RUFDQyxrQkFBQTtBQ1dEO0FEVEM7RUFDQyxxQ0FBQTtFQUNBLHFDQUFBO0VBQ0EscUJBQUE7RUFDQSxzQkFBQTtFQUNBLHVCQUFBO0VBQUEsa0JBQUE7RURrQ0QsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQ25DQyxXQUFBO0VBQ0EsZ0JBQUE7RUFDQSxTQUFBO0VBQ0EsU0FBQTtFQUNBLFlBQUE7RUFDQSxvQkFBQTtBQ2NGO0FEWkU7RUFDQyxjQUFBO0VBQ0EsZ0JBQUE7QUNjSDtBRFhFO0VBQ0Msc0JBQUE7QUNhSDtBRFZDO0VBQ0MsY0FBQTtFQUNBLGFBQUE7RUFDQSxZQUFBO0FDWUY7QURWQztFQUNDLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLDBDQUFBO0VBQ0Esc0JBQUE7RUFDQSxrQkFBQTtFQUNBLHdDQUFBO0FDWUY7QURUQztFQUNDLGtCQUFBO0VBQ0EsZUFBQTtFQUNBLHFCQUFBO0FDV0Y7QURSQztFQUNDLGtCQUFBO0VBQ0Esa0JBQUE7RUFDQSxXQUFBO0VBQ0EsbUJBQUE7QUNVRjtBRFBDO0VBQ0MsaUJBQUE7RUFDQSxnQkFBQTtFQUNBLDBCQUFBO0FDU0Y7QUROQzs7RUFFQyxtQkFBQTtBQ1FGO0FETEM7RUFDQyxvQkFBQTtBQ09GO0FETkU7RUFDQyxxQkFBQTtBQ1FIO0FESkM7RUFDQyxXQUFBO0VBQ0EsMEJBQUE7QUNNRjtBRExFO0VBQ0MscUJBQUE7QUNPSDtBREhDO0VBQ0Msa0JBQUE7RUFDQSxtQkFBQTtBQ0tGIiwiZmlsZSI6InBhaWEucHJlZml4LmNzcyJ9 */
