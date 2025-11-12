@@ -6,8 +6,8 @@
 // Base styles
 @use "./base/index.scss" as *;
 
-// Layout
-@use "./layout/index.scss" as *;
-
 // Components
 @use "./components/index.scss" as *;
+
+// Layout
+@use "./layout/index.scss" as *;
